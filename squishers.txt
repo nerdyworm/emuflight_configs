@@ -45,7 +45,8 @@ serial 1 2048 115200 57600 0 115200
 aux 0 0 0 1900 2100 0 0
 aux 1 1 1 900 1200 0 0
 aux 2 2 1 1300 1700 0 0
-aux 3 35 2 1800 2100 0 0
+aux 3 30 1 900 1700 0 0
+aux 4 35 2 1800 2100 0 0
 
 # adjrange
 adjrange 0 0 1 900 2100 12 1 0 0
@@ -64,7 +65,7 @@ set imuf_roll_q = 10000
 set imuf_pitch_q = 10000
 set imuf_yaw_q = 10000
 set imuf_w = 8
-set fpv_mix_degrees = 20
+set fpv_mix_degrees = 18
 set airmode_start_throttle_percent = 55
 set rx_spi_protocol = FRSKY_D
 set motor_pwm_protocol = DSHOT600
@@ -80,8 +81,9 @@ set osd_rssi_pos = 2369
 set osd_tim_2_pos = 2422
 set osd_flymode_pos = 2390
 set osd_craft_name_pos = 2410
-set vtx_channel = 2
-set vtx_freq = 5760
+set vtx_band = 5
+set vtx_channel = 8
+set vtx_freq = 5917
 set vcd_video_system = NTSC
 set frsky_spi_tx_id = 231,78
 set frsky_spi_offset = -26
@@ -105,9 +107,9 @@ set throttle_boost = 4
 set feathered_pids = 0
 set i_decay = 7
 set emu_boost = 500
-set emu_boost_yaw = 0
+set emu_boost_yaw = 300
 set emu_boost_limit = 75
-set emu_boost_limit_yaw = 20
+set emu_boost_limit_yaw = 45
 set p_pitch = 75
 set i_pitch = 75
 set d_pitch = 60
@@ -120,7 +122,7 @@ set p_yaw = 90
 set i_yaw = 100
 set d_yaw = 0
 set f_yaw = 80
-set p_angle_low = 75
+set p_angle_low = 70
 set d_angle_high = 6
 set level_limit = 85
 set angle_expo = 0

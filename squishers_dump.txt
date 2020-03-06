@@ -297,8 +297,8 @@ mode_color 7 0 3
 aux 0 0 0 1900 2100 0 0
 aux 1 1 1 900 1200 0 0
 aux 2 2 1 1300 1700 0 0
-aux 3 35 2 1800 2100 0 0
-aux 4 0 0 900 900 0 0
+aux 3 30 1 900 1700 0 0
+aux 4 35 2 1800 2100 0 0
 aux 5 0 0 900 900 0 0
 aux 6 0 0 900 900 0 0
 aux 7 0 0 900 900 0 0
@@ -417,7 +417,7 @@ set rc_smoothing_derivative_hz = 0
 set rc_smoothing_debug_axis = ROLL
 set rc_smoothing_input_type = BIQUAD
 set rc_smoothing_derivative_type = BIQUAD
-set fpv_mix_degrees = 20
+set fpv_mix_degrees = 18
 set cinematic_yaw = OFF
 set max_aux_channels = 14
 set serialrx_provider = SPEK1024
@@ -635,11 +635,11 @@ set debug_mode = NONE
 set rate_6pos_switch = OFF
 set cpu_overclock = OFF
 set pwr_on_arm_grace = 5
-set vtx_band = 4
-set vtx_channel = 2
+set vtx_band = 5
+set vtx_channel = 8
 set vtx_power = 1
 set vtx_low_power_disarm = OFF
-set vtx_freq = 5760
+set vtx_freq = 5917
 set vtx_pit_mode_freq = 0
 set vtx_halfduplex = ON
 set vcd_video_system = NTSC
@@ -728,9 +728,9 @@ set feathered_pids = 0
 set i_decay = 7
 set r_weight = 67
 set emu_boost = 500
-set emu_boost_yaw = 0
+set emu_boost_yaw = 300
 set emu_boost_limit = 75
-set emu_boost_limit_yaw = 20
+set emu_boost_limit_yaw = 45
 set nfe_racermode = OFF
 set cinematic_setpoint = OFF
 set p_pitch = 75
@@ -745,7 +745,7 @@ set p_yaw = 90
 set i_yaw = 100
 set d_yaw = 0
 set f_yaw = 80
-set p_angle_low = 75
+set p_angle_low = 70
 set i_angle_low = 50
 set d_angle_low = 10
 set p_angle_high = 35
