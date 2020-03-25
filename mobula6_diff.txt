@@ -228,7 +228,7 @@ rateprofile 5
 
 
 # restore original rateprofile selection
-rateprofile 0
+rateprofile 2
 
 # save configuration
 save
