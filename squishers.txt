@@ -1,7 +1,7 @@
 diff all
 
 # version
-# EmuFlight / MATEKF411RX (M41R) 0.2.15 Jan  4 2020 / 05:27:25 (77ec51c) MSP API: 1.43
+# EmuFlight / MATEKF411RX (M41R) 0.2.40 Mar 25 2020 / 16:22:01 (f9773bee9) MSP API: 1.45
 
 board_name 
 manufacturer_id 
@@ -59,8 +59,6 @@ adjrange 0 0 1 900 2100 12 1 0 0
 
 # master
 set gyro_sync_denom = 2
-set gyro_lowpass_hz = 200
-set gyro_lowpass2_hz = 400
 set imuf_roll_q = 10000
 set imuf_pitch_q = 10000
 set imuf_yaw_q = 10000
@@ -70,14 +68,11 @@ set fpv_mix_degrees = 85
 set cinematic_yaw = ON
 set airmode_start_throttle_percent = 55
 set rx_spi_protocol = FRSKY_D
-set motor_pwm_protocol = DSHOT600
 set bat_capacity = 300
 set vbat_max_cell_voltage = 45
 set vbat_min_cell_voltage = 32
 set vbat_warning_cell_voltage = 31
 set yaw_motors_reversed = ON
-set small_angle = 180
-set pid_process_denom = 1
 set runaway_takeoff_prevention = OFF
 set osd_vbat_pos = 2401
 set osd_rssi_pos = 2369
@@ -95,12 +90,8 @@ set frsky_spi_bind_hop_data = 6,34,64,94,124,154,184,214,9,39,69,99,129,159,189,
 # profile
 profile 0
 
-set dterm_lowpass_hz = 100
-set smart_dterm_smoothing = 1
 set witchcraft_roll = 0
 set witchcraft_pitch = 0
-set witchcraft_yaw = 0
-set vbat_pid_gain = ON
 set anti_gravity_gain = 1100
 set iterm_rotation = OFF
 set iterm_relax = RPY
@@ -128,9 +119,7 @@ set f_yaw = 80
 set p_angle_low = 70
 set d_angle_high = 6
 set level_limit = 85
-set angle_expo = 20
 set horizon_tilt_effect = 80
-set horizon_tilt_expert_mode = ON
 
 # profile
 profile 1
@@ -149,7 +138,6 @@ rateprofile 0
 set roll_rc_rate = 1
 set pitch_rc_rate = 1
 set yaw_rc_rate = 210
-set yaw_expo = 20
 set roll_srate = 0
 set pitch_srate = 0
 set yaw_srate = 0
@@ -182,7 +170,7 @@ rateprofile 5
 
 
 # restore original rateprofile selection
-rateprofile 2
+rateprofile 0
 
 # save configuration
 save
