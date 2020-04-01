@@ -1,7 +1,9 @@
-diff all
+# 
+
+# diff all
 
 # version
-# EmuFlight / CRAZYBEEF4FR (C4FR) 0.2.39 Mar 23 2020 / 07:51:39 (3063321f8) MSP API: 1.45
+# EmuFlight / CRAZYBEEF4FR (C4FR) 0.2.40 Apr  1 2020 / 14:21:18 (ba47ba114) MSP API: 1.45
 
 board_name 
 manufacturer_id 
@@ -90,7 +92,6 @@ rxrange 3 988 2012
 # rxfail
 
 # master
-set gyro_sync_denom = 2
 set imuf_roll_q = 10000
 set imuf_pitch_q = 10000
 set imuf_yaw_q = 10000
@@ -128,18 +129,18 @@ set witchcraft_roll = 0
 set witchcraft_pitch = 0
 set anti_gravity_gain = 1100
 set feedforward_transition = 25
-set spa_yaw_i = 50
+set spa_yaw_i = 100
 set iterm_rotation = OFF
 set iterm_relax = RPY
 set iterm_relax_type = SETPOINT
 set iterm_limit = 9
-set throttle_boost = 4
+set throttle_boost = 0
 set feathered_pids = 0
 set i_decay = 7
 set emu_boost = 800
-set emu_boost_yaw = 0
+set emu_boost_yaw = 400
 set emu_boost_limit = 75
-set emu_boost_limit_yaw = 0
+set emu_boost_limit_yaw = 250
 set p_pitch = 75
 set i_pitch = 75
 set d_pitch = 60
@@ -149,8 +150,8 @@ set i_roll = 75
 set d_roll = 60
 set f_roll = 80
 set p_yaw = 90
-set i_yaw = 120
-set d_yaw = 60
+set i_yaw = 100
+set d_yaw = 50
 set f_yaw = 80
 set p_angle_low = 80
 set d_angle_high = 6
