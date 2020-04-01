@@ -1,6 +1,4 @@
-# 
-
-# diff all
+diff all
 
 # version
 # EmuFlight / CRAZYBEEF4FR (C4FR) 0.2.40 Apr  1 2020 / 14:21:18 (ba47ba114) MSP API: 1.45
@@ -129,7 +127,7 @@ set witchcraft_roll = 0
 set witchcraft_pitch = 0
 set anti_gravity_gain = 1100
 set feedforward_transition = 25
-set spa_yaw_i = 100
+set spa_yaw_i = 90
 set iterm_rotation = OFF
 set iterm_relax = RPY
 set iterm_relax_type = SETPOINT
@@ -150,7 +148,7 @@ set i_roll = 75
 set d_roll = 60
 set f_roll = 80
 set p_yaw = 90
-set i_yaw = 100
+set i_yaw = 120
 set d_yaw = 50
 set f_yaw = 80
 set p_angle_low = 80
