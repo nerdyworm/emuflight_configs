@@ -14,7 +14,7 @@ name nerdyworm
 # feature
 feature -TELEMETRY
 feature -AIRMODE
-feature ANTI_GRAVITY
+feature -ANTI_GRAVITY
 
 # serial
 serial 1 2048 115200 57600 0 115200
