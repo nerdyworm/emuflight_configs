@@ -58,16 +58,29 @@ adjrange 0 0 1 900 2100 12 1 0 0
 
 # master
 set gyro_sync_denom = 2
+set imuf_roll_q = 5000
+set imuf_pitch_q = 5000
+set imuf_yaw_q = 5000
+set imuf_w = 5
 set acc_calibration = 10,55,-372
 set fpv_mix_degrees = 85
 set rx_spi_protocol = FRSKY_D
 set motor_pwm_protocol = DSHOT300
+set vbat_max_cell_voltage = 44
 set vbat_warning_cell_voltage = 34
+set force_battery_cell_count = 1
 set yaw_motors_reversed = ON
+set crashflip_power_percent = 100
 set osd_vbat_pos = 2401
 set osd_rssi_pos = 2369
 set osd_tim_2_pos = 2423
 set osd_flymode_pos = 2391
+set osd_stat_max_spd = OFF
+set osd_stat_battery = ON
+set osd_stat_min_rssi = OFF
+set osd_stat_used_mah = OFF
+set osd_stat_bbox = OFF
+set osd_stat_bb_no = OFF
 set vcd_video_system = NTSC
 set frsky_spi_tx_id = 231,78
 set frsky_spi_offset = -36
@@ -76,8 +89,23 @@ set frsky_spi_bind_hop_data = 6,34,64,94,124,154,184,214,9,39,69,99,129,159,189,
 # profile
 profile 0
 
+set spa_roll_i = 80
+set spa_pitch_i = 80
+set spa_yaw_p = 110
+set spa_yaw_i = 80
+set spa_yaw_d = 110
 set iterm_relax = RP
 set iterm_relax_type = SETPOINT
+set feathered_pids = 50
+set i_decay = 7
+set p_pitch = 60
+set i_pitch = 30
+set p_roll = 60
+set i_roll = 30
+set d_roll = 30
+set p_yaw = 75
+set i_yaw = 80
+set d_yaw = 0
 set p_angle_low = 110
 set level_limit = 85
 
@@ -95,9 +123,6 @@ profile 0
 # rateprofile
 rateprofile 0
 
-set yaw_rc_rate = 210
-set yaw_expo = 2
-set yaw_srate = 0
 
 # rateprofile
 rateprofile 1
