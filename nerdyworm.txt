@@ -98,6 +98,8 @@ set iterm_relax = RP
 set iterm_relax_type = SETPOINT
 set feathered_pids = 50
 set i_decay = 7
+set emu_boost_yaw = 15
+set emu_boost_limit_yaw = 10
 set p_pitch = 60
 set i_pitch = 30
 set p_roll = 60
@@ -108,6 +110,7 @@ set i_yaw = 80
 set d_yaw = 0
 set p_angle_low = 110
 set level_limit = 85
+set auto_profile_cell_count = 1
 
 # profile
 profile 1
