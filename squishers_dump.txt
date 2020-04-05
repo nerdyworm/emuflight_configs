@@ -150,7 +150,6 @@ feature -DYNAMIC_FILTER
 feature -LEGACY_SA_SUPPORT
 feature OSD
 feature RX_SPI
-feature ANTI_GRAVITY
 feature DYNAMIC_FILTER
 
 # beeper
@@ -159,7 +158,7 @@ beeper -RX_LOST
 beeper -RX_LOST_LANDING
 beeper -DISARMING
 beeper -ARMING
-beeper ARMING_GPS_FIX
+beeper -ARMING_GPS_FIX
 beeper -BAT_CRIT_LOW
 beeper -BAT_LOW
 beeper -GPS_STATUS
@@ -295,10 +294,10 @@ mode_color 7 0 3
 # aux
 aux 0 0 0 1700 2100 0 0
 aux 1 1 1 1700 2100 0 0
-aux 2 2 1 1300 1700 0 0
-aux 3 28 1 900 1700 0 0
-aux 4 30 1 1300 2100 0 0
-aux 5 35 2 1300 2100 0 0
+aux 2 28 1 900 1700 0 0
+aux 3 35 2 1800 2100 0 0
+aux 4 0 0 900 900 0 0
+aux 5 0 0 900 900 0 0
 aux 6 0 0 900 900 0 0
 aux 7 0 0 900 900 0 0
 aux 8 0 0 900 900 0 0
@@ -388,10 +387,10 @@ set gyro_notch2_cutoff = 0
 set gyro_calib_duration = 125
 set gyro_calib_noise_limit = 48
 set gyro_offset_yaw = 0
-set imuf_roll_q = 10000
-set imuf_pitch_q = 10000
-set imuf_yaw_q = 10000
-set imuf_w = 3
+set imuf_roll_q = 9000
+set imuf_pitch_q = 9000
+set imuf_yaw_q = 9000
+set imuf_w = 8
 set imuf_sharpness = 2500
 set gyro_overflow_detect = ALL
 set yaw_spin_recovery = ON
@@ -403,7 +402,7 @@ set acc_hardware = AUTO
 set acc_lpf_hz = 40
 set acc_trim_pitch = 0
 set acc_trim_roll = 0
-set acc_calibration = -100,79,-389
+set acc_calibration = -87,52,-377
 set mid_rc = 1500
 set min_check = 1050
 set max_check = 1900
@@ -422,7 +421,7 @@ set rc_smoothing_debug_axis = ROLL
 set rc_smoothing_input_type = BIQUAD
 set rc_smoothing_derivative_type = BIQUAD
 set fpv_mix_degrees = 85
-set cinematic_yaw = ON
+set cinematic_yaw = OFF
 set max_aux_channels = 14
 set serialrx_provider = SPEK1024
 set serialrx_inverted = OFF
@@ -465,8 +464,8 @@ set gimbal_mode = NORMAL
 set bat_capacity = 300
 set vbat_max_cell_voltage = 45
 set vbat_full_cell_voltage = 41
-set vbat_min_cell_voltage = 32
-set vbat_warning_cell_voltage = 31
+set vbat_min_cell_voltage = 33
+set vbat_warning_cell_voltage = 34
 set vbat_hysteresis = 1
 set current_meter = ADC
 set battery_meter = ADC
@@ -579,11 +578,11 @@ set osd_ah_max_rol = 40
 set osd_tim1 = 2560
 set osd_tim2 = 2561
 set osd_vbat_pos = 234
-set osd_rssi_pos = 2081
+set osd_rssi_pos = 2369
 set osd_tim_1_pos = 234
-set osd_tim_2_pos = 2103
+set osd_tim_2_pos = 2423
 set osd_remaining_time_estimate_pos = 234
-set osd_flymode_pos = 2424
+set osd_flymode_pos = 2393
 set osd_anti_gravity_pos = 234
 set osd_g_force_pos = 234
 set osd_throttle_pos = 321
@@ -699,15 +698,15 @@ set pid_at_min_throttle = ON
 set anti_gravity_mode = SMOOTH
 set anti_gravity_threshold = 350
 set anti_gravity_gain = 1100
-set spa_roll_p = 110
-set spa_roll_i = 85
-set spa_roll_d = 110
-set spa_pitch_p = 110
-set spa_pitch_i = 85
-set spa_pitch_d = 110
-set spa_yaw_p = 130
-set spa_yaw_i = 70
-set spa_yaw_d = 130
+set spa_roll_p = 100
+set spa_roll_i = 100
+set spa_roll_d = 100
+set spa_pitch_p = 100
+set spa_pitch_i = 100
+set spa_pitch_d = 100
+set spa_yaw_p = 100
+set spa_yaw_i = 100
+set spa_yaw_d = 100
 set acc_limit_yaw = 0
 set acc_limit = 0
 set crash_dthreshold = 50
@@ -729,26 +728,26 @@ set pidsum_limit = 1000
 set pidsum_limit_yaw = 400
 set throttle_boost = 10
 set throttle_boost_cutoff = 15
-set feathered_pids = 0
-set i_decay = 7
-set emu_boost = 200
-set emu_boost_yaw = 100
+set feathered_pids = 15
+set i_decay = 5
+set emu_boost = 120
+set emu_boost_yaw = 80
 set emu_boost_limit = 20
-set emu_boost_limit_yaw = 10
+set emu_boost_limit_yaw = 8
 set nfe_racermode = OFF
-set p_pitch = 76
+set p_pitch = 75
 set i_pitch = 80
-set d_pitch = 62
-set p_roll = 76
+set d_pitch = 70
+set p_roll = 75
 set i_roll = 80
-set d_roll = 62
-set p_yaw = 92
+set d_roll = 70
+set p_yaw = 90
 set i_yaw = 100
-set d_yaw = 12
-set p_angle_low = 90
+set d_yaw = 70
+set p_angle_low = 100
 set d_angle_low = 10
-set p_angle_high = 35
-set d_angle_high = 6
+set p_angle_high = 40
+set d_angle_high = 5
 set f_angle = 40
 set level_limit = 85
 set angle_expo = 2
@@ -937,8 +936,8 @@ set yaw_rc_rate = 210
 set roll_expo = 2
 set pitch_expo = 2
 set yaw_expo = 2
-set roll_srate = 80
-set pitch_srate = 80
+set roll_srate = 75
+set pitch_srate = 75
 set yaw_srate = 10
 set rate_center_sensitivity = 100
 set rate_end_sensitivity = 100
@@ -1000,10 +999,10 @@ set yaw_expo = 2
 set roll_srate = 0
 set pitch_srate = 0
 set yaw_srate = 0
-set rate_center_sensitivity = 175
-set rate_end_sensitivity = 175
-set rate_center_weight = 30
-set rate_end_weight = 20
+set rate_center_sensitivity = 100
+set rate_end_sensitivity = 100
+set rate_center_weight = 0
+set rate_end_weight = 0
 set tpa_rate_p = 75
 set tpa_rate_i = 125
 set tpa_rate_d = 65
