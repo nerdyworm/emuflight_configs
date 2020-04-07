@@ -1,7 +1,7 @@
 diff all
 
 # version
-# EmuFlight / CRAZYBEEF4FR (C4FR) 0.2.40 Apr  1 2020 / 14:21:18 (ba47ba114) MSP API: 1.45
+# EmuFlight / CRAZYBEEF4FR (C4FR) 0.2.45 Apr  1 2020 / 15:15:14 (c1f9d24b1) MSP API: 1.45
 
 board_name 
 manufacturer_id 
@@ -71,10 +71,9 @@ serial 1 2048 115200 57600 0 115200
 # aux
 aux 0 0 0 1700 2100 0 0
 aux 1 1 1 1700 2100 0 0
-aux 2 2 1 1300 1700 0 0
-aux 3 28 1 900 1700 0 0
-aux 4 30 1 1300 2100 0 0
-aux 5 35 2 1300 2100 0 0
+aux 2 28 1 900 1700 0 0
+aux 3 30 1 1800 2100 0 0
+aux 4 35 2 1800 2100 0 0
 
 # adjrange
 adjrange 0 0 1 900 2100 12 1 0 0
@@ -90,10 +89,11 @@ rxrange 3 988 2012
 # rxfail
 
 # master
-set imuf_roll_q = 10000
-set imuf_pitch_q = 10000
-set imuf_yaw_q = 10000
-set imuf_w = 8
+set gyro_sync_denom = 2
+set imuf_roll_q = 5000
+set imuf_pitch_q = 5000
+set imuf_yaw_q = 5000
+set imuf_w = 6
 set acc_calibration = 12,-17,66
 set fpv_mix_degrees = 85
 set cinematic_yaw = ON
@@ -101,8 +101,8 @@ set airmode_start_throttle_percent = 55
 set rx_spi_protocol = FRSKY_D
 set bat_capacity = 300
 set vbat_max_cell_voltage = 45
-set vbat_min_cell_voltage = 32
-set vbat_warning_cell_voltage = 31
+set vbat_warning_cell_voltage = 34
+set force_battery_cell_count = 1
 set yaw_motors_reversed = ON
 set crashflip_power_percent = 100
 set runaway_takeoff_prevention = OFF
@@ -126,7 +126,6 @@ profile 0
 set witchcraft_roll = 0
 set witchcraft_pitch = 0
 set anti_gravity_gain = 1100
-set feedforward_transition = 25
 set spa_yaw_i = 90
 set iterm_rotation = OFF
 set iterm_relax = RPY
@@ -142,15 +141,12 @@ set emu_boost_limit_yaw = 250
 set p_pitch = 75
 set i_pitch = 75
 set d_pitch = 60
-set f_pitch = 80
 set p_roll = 75
 set i_roll = 75
 set d_roll = 60
-set f_roll = 80
 set p_yaw = 90
 set i_yaw = 120
 set d_yaw = 50
-set f_yaw = 80
 set p_angle_low = 80
 set d_angle_high = 6
 set level_limit = 85
@@ -168,7 +164,7 @@ set iterm_relax = RPY
 set iterm_relax_type = SETPOINT
 set iterm_limit = 9
 set throttle_boost = 4
-set feathered_pids = 0
+set feathered_pids = 60
 set i_decay = 7
 set emu_boost = 500
 set emu_boost_yaw = 0
@@ -177,15 +173,13 @@ set emu_boost_limit_yaw = 20
 set p_pitch = 75
 set i_pitch = 75
 set d_pitch = 60
-set f_pitch = 80
 set p_roll = 75
 set i_roll = 75
 set d_roll = 60
-set f_roll = 80
 set p_yaw = 90
 set i_yaw = 100
 set d_yaw = 0
-set f_yaw = 80
+set p_angle_low = 110
 set d_angle_high = 6
 set f_angle = 100
 set level_limit = 85
@@ -195,9 +189,20 @@ set horizon_tilt_effect = 80
 # profile
 profile 2
 
+set anti_gravity_gain = 1100
+set iterm_relax = RPY
+set i_decay = 8
+set p_pitch = 60
+set d_pitch = 40
+set p_roll = 60
+set d_roll = 40
+set p_yaw = 70
+set d_yaw = 0
+set p_angle_low = 110
+set level_limit = 85
 
 # restore original profile selection
-profile 0
+profile 1
 
 # rateprofile
 rateprofile 0
@@ -231,6 +236,7 @@ set yaw_expo = 2
 set roll_srate = 0
 set pitch_srate = 0
 set yaw_srate = 0
+set stick_center_p = 101
 
 # rateprofile
 rateprofile 3
